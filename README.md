@@ -8,6 +8,15 @@ Senior Software Engineer mit mehr als 40 Jahren Erfahrung in Softwareentwicklung
 
 Dieses Repository ist ein recruiter-freundlicher Einstiegspunkt in ausgewaehlte oeffentliche Arbeitsproben, technische Schwerpunkte und meine berufliche Positionierung fuer Festanstellungen in Deutschland.
 
+### Schnellueberblick
+
+- Fokus: `Backend Engineering`, `Software Architecture`, `Integration`
+- Ziel: glaubwuerdiger Nachweis von Senioritaet, Lieferfaehigkeit und Engineering-Urteil
+- In diesem Repository:
+  - recruiter-freundliche Positionierung
+  - kleines Java-Backend als pruefbarer Kompetenzbeweis
+  - technische Einordnung des Backends
+
 ### Zielrollen
 
 - Senior Software Engineer
@@ -41,6 +50,15 @@ Live-Beispiele:
 
 - [DemoApps](https://demoapps-kubimtk.vercel.app/)
 
+### Direkter technischer Nachweis in diesem Repository
+
+Zusaetzlich zu den oeffentlichen DemoApps enthaelt dieses Repository ein kleines Backend-Showcase:
+
+- [`backend/`](backend/) - Java/Spring-Boot-API mit Validierung, Business-Regeln, strukturierter Fehlerbehandlung und Tests
+- [`docs/backend-showcase.md`](docs/backend-showcase.md) - kurze technische Einordnung fuer Recruiter und Hiring Manager
+
+Dieses Beispiel ist bewusst klein gehalten, soll aber zeigen, wie ich Backend-Code strukturiere, fachliche Regeln abbilde und technische Entscheidungen nachvollziehbar mache.
+
 ### KI und Engineering-Urteil
 
 Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrachte generierten Code aber nicht als selbst-validierend. Mein Fokus bleibt auf Architektur, Korrektheit, Wartbarkeit, Testbarkeit und fachlicher Abnahme.
@@ -52,6 +70,15 @@ Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrac
 Senior software engineer with 40+ years of experience in software development, architecture and quality-focused delivery.
 
 This repository is a recruiter-friendly entry point to selected public work, technical focus areas and professional positioning for permanent roles in Germany.
+
+## Quick Overview
+
+- Focus: `Backend Engineering`, `Software Architecture`, `Integration`
+- Goal: provide credible evidence of seniority, delivery capability and engineering judgment
+- In this repository:
+  - recruiter-friendly positioning
+  - a small Java backend as verifiable proof of backend capability
+  - a short technical case study for hiring discussions
 
 ## Target Roles
 
@@ -124,6 +151,15 @@ Current public examples include:
 Live examples:
 
 - [DemoApps](https://demoapps-kubimtk.vercel.app/)
+
+## Direct Technical Evidence In This Repository
+
+In addition to the public DemoApps examples, this repository now includes a focused backend showcase:
+
+- [`backend/`](backend/) - Java/Spring Boot API with validation, business rules, structured error handling and tests
+- [`docs/backend-showcase.md`](docs/backend-showcase.md) - short technical framing for recruiters and hiring managers
+
+The example is intentionally compact. Its purpose is not feature breadth, but to show how I structure backend code, model business rules and keep decisions understandable.
 
 ## What These Examples Show
 

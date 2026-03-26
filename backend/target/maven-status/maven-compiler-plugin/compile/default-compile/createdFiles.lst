@@ -1,0 +1,16 @@
+com/wolfgang/showcase/appointment/repository/InMemoryAppointmentRepository.class
+com/wolfgang/showcase/appointment/AppointmentShowcaseApplication.class
+com/wolfgang/showcase/appointment/config/OpenApiConfig.class
+com/wolfgang/showcase/appointment/dto/ValidationViolation.class
+com/wolfgang/showcase/appointment/dto/ErrorResponse.class
+com/wolfgang/showcase/appointment/model/Appointment$Status.class
+com/wolfgang/showcase/appointment/service/AppointmentConflictException.class
+com/wolfgang/showcase/appointment/web/AppointmentController.class
+com/wolfgang/showcase/appointment/service/AppointmentNotFoundException.class
+com/wolfgang/showcase/appointment/service/InvalidAppointmentException.class
+com/wolfgang/showcase/appointment/model/Appointment.class
+com/wolfgang/showcase/appointment/dto/AppointmentResponse.class
+com/wolfgang/showcase/appointment/web/ApiExceptionHandler.class
+com/wolfgang/showcase/appointment/repository/AppointmentRepository.class
+com/wolfgang/showcase/appointment/dto/CreateAppointmentRequest.class
+com/wolfgang/showcase/appointment/service/AppointmentService.class
