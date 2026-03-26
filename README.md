@@ -4,9 +4,9 @@
 
 ## Deutsche Kurzfassung
 
-Senior Software Engineer mit mehr als 40 Jahren Erfahrung in Softwareentwicklung, Architektur und qualitaetsorientierter Umsetzung.
+Ich bin Senior Software Engineer mit mehr als 40 Jahren Erfahrung in Softwareentwicklung, Architektur und qualitaetsorientierter Umsetzung.
 
-Dieses Repository ist ein recruiter-freundlicher Einstiegspunkt in ausgewaehlte oeffentliche Arbeitsproben, technische Schwerpunkte und meine berufliche Positionierung fuer Festanstellungen in Deutschland.
+Dieses Repository ist mein recruiter-freundlicher Einstiegspunkt in ausgewaehlte oeffentliche Arbeitsproben, technische Schwerpunkte und meine berufliche Positionierung fuer Festanstellungen in Deutschland.
 
 ### Schnellueberblick
 
@@ -67,9 +67,9 @@ Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrac
 
 ## English version
 
-Senior software engineer with 40+ years of experience in software development, architecture and quality-focused delivery.
+I am a senior software engineer with 40+ years of experience in software development, architecture and quality-focused delivery.
 
-This repository is a recruiter-friendly entry point to selected public work, technical focus areas and professional positioning for permanent roles in Germany.
+This repository is my recruiter-friendly entry point to selected public work, technical focus areas and professional positioning for permanent roles in Germany.
 
 ## Quick Overview
 
@@ -196,4 +196,4 @@ Focus areas:
 
 ## Notes For Recruiters
 
-If you are considering roles in backend engineering, architecture, integration work or regulated/domain-heavy systems, this repository is meant to provide a compact entry point. A tailored CV and role-specific summary can then be derived from this base.
+If you are considering me for roles in backend engineering, architecture, integration work or regulated/domain-heavy systems, this repository is meant to provide a compact entry point. A tailored CV and role-specific summary can then be derived from this base.

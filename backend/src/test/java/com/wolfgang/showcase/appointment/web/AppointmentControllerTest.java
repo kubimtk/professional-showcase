@@ -36,7 +36,7 @@ class AppointmentControllerTest {
         mockMvc.perform(post("/api/appointments")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("{"
-                                + "\"customerName\":\"Wolfgang Kubisiak\","
+                                + "\"customerName\":\"Sample Customer\","
                                 + "\"customerEmail\":\"wolfgang+" + UUID.randomUUID() + "@example.org\","
                                 + "\"subject\":\"Backend showcase walkthrough\","
                                 + "\"startsAt\":\"" + startsAt.format(FORMATTER) + "\","

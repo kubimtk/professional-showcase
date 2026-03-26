@@ -2,7 +2,7 @@
 
 ## Zweck
 
-Dieses Beispiel ist kein grosses Produkt, sondern ein bewusst kleines Backend-Artifact fuer Recruiter und Hiring Manager. Es soll schnell pruefbar machen, wie Wolfgang Kubisiak Backend-Code strukturiert, fachliche Regeln abbildet und technische Entscheidungen nachvollziehbar haelt.
+Dieses Beispiel ist kein grosses Produkt, sondern ein bewusst kleines Backend-Artifact fuer Recruiter und Hiring Manager. Es soll schnell pruefbar machen, wie ich Backend-Code strukturiere, fachliche Regeln abbilde und technische Entscheidungen nachvollziehbar halte.
 
 ## Was das Beispiel zeigt
 
@@ -27,7 +27,7 @@ Das Showcase bildet eine kleine Appointment-API ab. Das Thema ist absichtlich ei
 
 ### Warum Java und Spring Boot
 
-Java sendet fuer dieses Profil das staerkste Signal in Richtung deutscher Backend-, Architektur- und Enterprise-Rollen. Spring Boot erlaubt ein kleines, aber professionell lesbares Setup mit bekannten Standards fuer Web, Validation, Tests und API-Dokumentation.
+Java sendet fuer mein Profil das staerkste Signal in Richtung deutscher Backend-, Architektur- und Enterprise-Rollen. Spring Boot erlaubt ein kleines, aber professionell lesbares Setup mit bekannten Standards fuer Web, Validation, Tests und API-Dokumentation.
 
 ### Warum bewusst klein
 

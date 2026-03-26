@@ -28,14 +28,14 @@ class AppointmentServiceTest {
         LocalDateTime endsAt = startsAt.plusMinutes(45);
 
         Appointment appointment = appointmentService.createAppointment(
-                "Wolfgang Kubisiak",
-                " Wolfgang.Kubisiak@Example.org ",
+                "Sample Customer",
+                " sample.customer@example.org ",
                 "Architecture review",
                 startsAt,
                 endsAt
         );
 
-        assertEquals("wolfgang.kubisiak@example.org", appointment.getCustomerEmail());
+        assertEquals("sample.customer@example.org", appointment.getCustomerEmail());
         assertEquals(Appointment.Status.SCHEDULED, appointment.getStatus());
     }
 
@@ -45,7 +45,7 @@ class AppointmentServiceTest {
         LocalDateTime endsAt = startsAt.plusMinutes(30);
 
         appointmentService.createAppointment(
-                "Wolfgang Kubisiak",
+                "Sample Customer",
                 "wolfgang@example.org",
                 "Initial meeting",
                 startsAt,
@@ -55,7 +55,7 @@ class AppointmentServiceTest {
         assertThrows(
                 AppointmentConflictException.class,
                 () -> appointmentService.createAppointment(
-                        "Wolfgang Kubisiak",
+                        "Sample Customer",
                         "wolfgang@example.org",
                         "Follow-up",
                         startsAt.plusMinutes(15),
@@ -72,7 +72,7 @@ class AppointmentServiceTest {
         assertThrows(
                 InvalidAppointmentException.class,
                 () -> appointmentService.createAppointment(
-                        "Wolfgang Kubisiak",
+                        "Sample Customer",
                         "wolfgang@example.org",
                         "Too early",
                         startsAt,
