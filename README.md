@@ -56,6 +56,8 @@ Zusaetzlich zu den oeffentlichen DemoApps enthaelt dieses Repository ein kleines
 
 - [`backend/`](backend/) - Java/Spring-Boot-API mit Validierung, Business-Regeln, strukturierter Fehlerbehandlung und Tests
 - [`docs/backend-showcase.md`](docs/backend-showcase.md) - kurze technische Einordnung fuer Recruiter und Hiring Manager
+- [`postman/`](postman/) - Postman-Collection und lokale Environment-Datei, damit technische Reviewer und spaetere Kollegen die API schnell manuell pruefen koennen
+- [`backend/scripts/quick-test.sh`](backend/scripts/quick-test.sh) - Shell-Smoke-Test mit `curl`, damit sich das Backend lokal mit wenig Aufwand starten, pruefen und wieder beenden laesst
 
 Dieses Beispiel ist bewusst klein gehalten, soll aber zeigen, wie ich Backend-Code strukturiere, fachliche Regeln abbilde und technische Entscheidungen nachvollziehbar mache.
 
@@ -158,6 +160,8 @@ In addition to the public DemoApps examples, this repository now includes a focu
 
 - [`backend/`](backend/) - Java/Spring Boot API with validation, business rules, structured error handling and tests
 - [`docs/backend-showcase.md`](docs/backend-showcase.md) - short technical framing for recruiters and hiring managers
+- [`postman/`](postman/) - Postman collection and local environment so technical reviewers and future teammates can verify the API quickly
+- [`backend/scripts/quick-test.sh`](backend/scripts/quick-test.sh) - curl-based smoke test to start, check and stop the backend locally with little setup
 
 The example is intentionally compact. Its purpose is not feature breadth, but to show how I structure backend code, model business rules and keep decisions understandable.
 
