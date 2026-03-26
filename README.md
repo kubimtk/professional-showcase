@@ -1,5 +1,7 @@
 # Wolfgang Kubisiak - Professional Showcase
 
+[English version](#english-version)
+
 ## Deutsche Kurzfassung
 
 Senior Software Engineer mit mehr als 40 Jahren Erfahrung in Softwareentwicklung, Architektur und qualitaetsorientierter Umsetzung.
@@ -44,6 +46,8 @@ Live-Beispiele:
 Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrachte generierten Code aber nicht als selbst-validierend. Mein Fokus bleibt auf Architektur, Korrektheit, Wartbarkeit, Testbarkeit und fachlicher Abnahme.
 
 ---
+
+## English version
 
 Senior software engineer with 40+ years of experience in software development, architecture and quality-focused delivery.
 
