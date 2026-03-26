@@ -1,5 +1,50 @@
 # Wolfgang Kubisiak - Professional Showcase
 
+## Deutsche Kurzfassung
+
+Senior Software Engineer mit mehr als 40 Jahren Erfahrung in Softwareentwicklung, Architektur und qualitaetsorientierter Umsetzung.
+
+Dieses Repository ist ein recruiter-freundlicher Einstiegspunkt in ausgewaehlte oeffentliche Arbeitsproben, technische Schwerpunkte und meine berufliche Positionierung fuer Festanstellungen in Deutschland.
+
+### Zielrollen
+
+- Senior Software Engineer
+- Backend Engineer
+- Software Architect
+- Integration Engineer
+- Senior Engineer in regulierten oder technisch anspruchsvollen Umfeldern
+
+### Kernstaerken
+
+- Langjaehrige Erfahrung mit `C++`, `Java` und `C#`
+- Backend-, Integrations- und Architekturarbeit
+- Test-First-Denken mit `BDD`, `TDD` und klaren Abnahmekriterien
+- Erfahrung in regulierten und fachlich anspruchsvollen Umfeldern
+- Pragmatische Umsetzung wartbarer Software
+- Produktiver Einsatz von KI-gestuetzter Entwicklung mit `Cursor`, `LLMs` und Prompting
+
+### Was ich mitbringe
+
+- Mehr als vier Jahrzehnte praktische Softwareentwicklung
+- Viele Jahre im Finanz- und Risikoumfeld bei `Commerzbank`
+- Juengere Projekterfahrung bei `adesso` in Finance, Energy, Insurance und Backend-Systemen
+- Gruender- und Chefentwickler-Erfahrung bei `ALPHATIER Studios`
+- KI-Weiterbildung bei `WBS CODING SCHOOL`, abgeschlossen `2025`
+
+### Oeffentliche Arbeitsproben
+
+Die oeffentlichen Beispiele stammen derzeit aus der Projektfamilie `DemoApps`. Sie sind urspruenglich im Kontext eines produktisierten Freelance-Angebots entstanden, zeigen aber trotzdem reale Lieferfaehigkeit, Produktdenken und technische Umsetzung.
+
+Live-Beispiele:
+
+- [DemoApps](https://demoapps-kubimtk.vercel.app/)
+
+### KI und Engineering-Urteil
+
+Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrachte generierten Code aber nicht als selbst-validierend. Mein Fokus bleibt auf Architektur, Korrektheit, Wartbarkeit, Testbarkeit und fachlicher Abnahme.
+
+---
+
 Senior software engineer with 40+ years of experience in software development, architecture and quality-focused delivery.
 
 This repository is a recruiter-friendly entry point to selected public work, technical focus areas and professional positioning for permanent roles in Germany.
