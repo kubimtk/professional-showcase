@@ -29,6 +29,39 @@ Danach erreichbar unter:
 mvn test
 ```
 
+## Postman
+
+Fuer manuelle API-Tests liegen vorbereitete Postman-Dateien im Ordner [`../postman/`](../postman/):
+
+- Collection: `appointment-backend-showcase.postman_collection.json`
+- Environment: `local.postman_environment.json`
+
+Empfohlene Reihenfolge in Postman:
+
+1. `List appointments`
+2. `Create appointment`
+3. `Get appointment by id`
+4. `Cancel appointment`
+
+Die Collection speichert die erzeugte `appointmentId` automatisch und berechnet fuer den Create-Request ein gueltiges naechstes Werktags-Zeitfenster.
+
+## Schneller Shell-Test mit curl
+
+Fuer einen schnellen End-to-End-Test ohne Postman gibt es das Skript [`scripts/quick-test.sh`](scripts/quick-test.sh):
+
+```bash
+./scripts/quick-test.sh
+```
+
+Optional mit anderem Zielsystem:
+
+```bash
+BASE_URL=http://localhost:8080 ./scripts/quick-test.sh
+```
+
+Das Skript legt einen Termin an, liest ihn wieder aus, storniert ihn und zeigt anschliessend die Terminliste an.
+Falls lokal noch kein Backend laeuft, baut das Skript automatisch das JAR, startet das Backend daraus, wartet auf die API und beendet den gestarteten Prozess am Ende wieder sauber.
+
 ## Docker
 
 ```bash

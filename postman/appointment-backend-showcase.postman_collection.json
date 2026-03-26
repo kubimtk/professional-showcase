@@ -1,0 +1,206 @@
+{
+  "info": {
+    "_postman_id": "f0d45c60-604d-4fd7-b4b6-4f5f1df8b9f5",
+    "name": "Appointment Backend Showcase",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Postman collection for manually testing the Spring Boot appointment showcase API."
+  },
+  "item": [
+    {
+      "name": "List appointments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/appointments",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "appointments"
+          ]
+        },
+        "description": "Returns all appointments sorted by start time."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"status is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Create appointment",
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "function pad(value) {",
+              "    return String(value).padStart(2, '0');",
+              "}",
+              "",
+              "function formatLocal(date) {",
+              "    return [",
+              "        date.getFullYear(),",
+              "        pad(date.getMonth() + 1),",
+              "        pad(date.getDate())",
+              "    ].join('-') + 'T' + [",
+              "        pad(date.getHours()),",
+              "        pad(date.getMinutes()),",
+              "        pad(date.getSeconds())",
+              "    ].join(':');",
+              "}",
+              "",
+              "const start = new Date();",
+              "start.setDate(start.getDate() + 1);",
+              "while (start.getDay() === 0 || start.getDay() === 6) {",
+              "    start.setDate(start.getDate() + 1);",
+              "}",
+              "start.setHours(10, 0, 0, 0);",
+              "",
+              "const end = new Date(start.getTime());",
+              "end.setMinutes(end.getMinutes() + 30);",
+              "",
+              "pm.collectionVariables.set('startAt', formatLocal(start));",
+              "pm.collectionVariables.set('endAt', formatLocal(end));"
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"status is 201\", function () {",
+              "    pm.response.to.have.status(201);",
+              "});",
+              "",
+              "const body = pm.response.json();",
+              "pm.collectionVariables.set('appointmentId', body.id);",
+              "",
+              "pm.test(\"appointment id is stored\", function () {",
+              "    pm.expect(pm.collectionVariables.get('appointmentId')).to.be.a('string').and.not.empty;",
+              "});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerName\": \"Sample Customer\",\n  \"customerEmail\": \"sample.customer+{{$randomInt}}@example.org\",\n  \"subject\": \"Backend showcase walkthrough\",\n  \"startsAt\": \"{{startAt}}\",\n  \"endsAt\": \"{{endAt}}\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/appointments",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "appointments"
+          ]
+        },
+        "description": "Creates one appointment and stores its id as a collection variable."
+      }
+    },
+    {
+      "name": "Get appointment by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/appointments/{{appointmentId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "appointments",
+            "{{appointmentId}}"
+          ]
+        },
+        "description": "Reads the appointment that was created by the previous request."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"status is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cancel appointment",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/appointments/{{appointmentId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "appointments",
+            "{{appointmentId}}"
+          ]
+        },
+        "description": "Cancels the stored appointment."
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"status is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});",
+              "",
+              "pm.test(\"appointment is cancelled\", function () {",
+              "    pm.expect(pm.response.json().status).to.eql('CANCELLED');",
+              "});"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "appointmentId",
+      "value": ""
+    },
+    {
+      "key": "startAt",
+      "value": ""
+    },
+    {
+      "key": "endAt",
+      "value": ""
+    }
+  ]
+}
