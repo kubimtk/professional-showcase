@@ -2,7 +2,6 @@ package com.wolfgang.showcase.appointment.web;
 
 import com.wolfgang.showcase.appointment.dto.AppointmentResponse;
 import com.wolfgang.showcase.appointment.dto.CreateAppointmentRequest;
-import com.wolfgang.showcase.appointment.model.Appointment;
 import com.wolfgang.showcase.appointment.service.AppointmentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -36,33 +35,34 @@ public class AppointmentController {
     @Operation(summary = "List appointments", description = "Returns all appointments sorted by start time.")
     public List<AppointmentResponse> listAppointments() {
         return appointmentService.listAppointments().stream()
-                .map(AppointmentResponse::from)
+                .map(AppointmentResponse::new)
                 .collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
     @Operation(summary = "Get one appointment", description = "Returns a single appointment by identifier.")
     public AppointmentResponse getAppointment(@PathVariable UUID id) {
-        return AppointmentResponse.from(appointmentService.getAppointment(id));
+        return new AppointmentResponse(appointmentService.getAppointment(id));
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Create appointment", description = "Creates a new appointment if business rules are satisfied.")
     public AppointmentResponse createAppointment(@Valid @RequestBody CreateAppointmentRequest request) {
-        Appointment appointment = appointmentService.createAppointment(
-                request.getCustomerName(),
-                request.getCustomerEmail(),
-                request.getSubject(),
-                request.getStartsAt(),
-                request.getEndsAt()
+        return new AppointmentResponse(
+                appointmentService.createAppointment(
+                        request.getCustomerName(),
+                        request.getCustomerEmail(),
+                        request.getSubject(),
+                        request.getStartsAt(),
+                        request.getEndsAt()
+                )
         );
-        return AppointmentResponse.from(appointment);
     }
 
     @DeleteMapping("/{id}")
     @Operation(summary = "Cancel appointment", description = "Cancels an existing appointment.")
     public AppointmentResponse cancelAppointment(@PathVariable UUID id) {
-        return AppointmentResponse.from(appointmentService.cancelAppointment(id));
+        return new AppointmentResponse(appointmentService.cancelAppointment(id));
     }
 }

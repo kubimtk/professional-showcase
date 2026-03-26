@@ -65,6 +65,8 @@ Dieses Beispiel ist bewusst klein gehalten, soll aber zeigen, wie ich Backend-Co
 
 Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrachte generierten Code aber nicht als selbst-validierend. Mein Fokus bleibt auf Architektur, Korrektheit, Wartbarkeit, Testbarkeit und fachlicher Abnahme.
 
+Ein konkretes Beispiel in diesem Repository: Ich habe generierten Mapping-Code im API-Response-Bereich vereinfacht und lesbarer gemacht, indem ich die Umwandlungslogik zentral in einen `AppointmentResponse`-Konstruktor verschoben habe.
+
 ---
 
 ## English version
@@ -175,6 +177,8 @@ The example is intentionally compact. Its purpose is not feature breadth, but to
 ## AI And Engineering Judgment
 
 I use AI-assisted development productively, especially with `Cursor`, but I do not treat generated code as self-validating. My focus remains on architecture, correctness, maintainability, testing and acceptance.
+
+One concrete example in this repository: I simplified generated mapping code in the API response layer by moving the conversion logic into an `AppointmentResponse` constructor to make the calling code clearer.
 
 That matters especially in systems where business logic, traceability and long-term maintainability are more important than raw speed alone.
 

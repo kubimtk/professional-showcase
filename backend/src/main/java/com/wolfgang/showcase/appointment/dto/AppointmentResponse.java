@@ -15,7 +15,19 @@ public class AppointmentResponse {
     private final LocalDateTime endsAt;
     private final String status;
 
-    public AppointmentResponse(
+    public AppointmentResponse(Appointment appointment) {
+        this(
+                appointment.getId(),
+                appointment.getCustomerName(),
+                appointment.getCustomerEmail(),
+                appointment.getSubject(),
+                appointment.getStartsAt(),
+                appointment.getEndsAt(),
+                appointment.getStatus().name()
+        );
+    }
+
+    private AppointmentResponse(
             UUID id,
             String customerName,
             String customerEmail,
@@ -31,18 +43,6 @@ public class AppointmentResponse {
         this.startsAt = startsAt;
         this.endsAt = endsAt;
         this.status = status;
-    }
-
-    public static AppointmentResponse from(Appointment appointment) {
-        return new AppointmentResponse(
-                appointment.getId(),
-                appointment.getCustomerName(),
-                appointment.getCustomerEmail(),
-                appointment.getSubject(),
-                appointment.getStartsAt(),
-                appointment.getEndsAt(),
-                appointment.getStatus().name()
-        );
     }
 
     public UUID getId() {
