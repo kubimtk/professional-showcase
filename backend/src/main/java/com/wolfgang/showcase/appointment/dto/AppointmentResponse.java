@@ -3,6 +3,7 @@ package com.wolfgang.showcase.appointment.dto;
 import com.wolfgang.showcase.appointment.model.Appointment;
 
 import java.time.LocalDateTime;
+import java.util.Objects;
 import java.util.UUID;
 
 public class AppointmentResponse {
@@ -16,33 +17,15 @@ public class AppointmentResponse {
     private final String status;
 
     public AppointmentResponse(Appointment appointment) {
-        this(
-                appointment.getId(),
-                appointment.getCustomerName(),
-                appointment.getCustomerEmail(),
-                appointment.getSubject(),
-                appointment.getStartsAt(),
-                appointment.getEndsAt(),
-                appointment.getStatus().name()
-        );
-    }
+        Appointment source = Objects.requireNonNull(appointment, "appointment must not be null");
 
-    private AppointmentResponse(
-            UUID id,
-            String customerName,
-            String customerEmail,
-            String subject,
-            LocalDateTime startsAt,
-            LocalDateTime endsAt,
-            String status
-    ) {
-        this.id = id;
-        this.customerName = customerName;
-        this.customerEmail = customerEmail;
-        this.subject = subject;
-        this.startsAt = startsAt;
-        this.endsAt = endsAt;
-        this.status = status;
+        this.id = source.getId();
+        this.customerName = source.getCustomerName();
+        this.customerEmail = source.getCustomerEmail();
+        this.subject = source.getSubject();
+        this.startsAt = source.getStartsAt();
+        this.endsAt = source.getEndsAt();
+        this.status = source.getStatus().name();
     }
 
     public UUID getId() {
