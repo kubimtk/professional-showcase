@@ -65,6 +65,8 @@ Dieses Beispiel ist bewusst klein gehalten, soll aber zeigen, wie ich Backend-Co
 
 Ich nutze KI-gestuetzte Entwicklung produktiv, insbesondere mit `Cursor`, betrachte generierten Code aber nicht als selbst-validierend. Mein Fokus bleibt auf Architektur, Korrektheit, Wartbarkeit, Testbarkeit und fachlicher Abnahme.
 
+Qualitaet beginnt fuer mich nicht erst beim Nachtesten. Sie beginnt dort, wo gewuenschtes Verhalten, Abnahmekriterien und fachliche Erwartungen vor der Implementierung klar gemacht werden. Darum sind `BDD`, `TDD` und Test-First fuer mich nicht nur Techniken, sondern Ausdruck verantwortlicher Softwareentwicklung.
+
 Ein konkretes Beispiel in diesem Repository: Ich habe generierten Mapping-Code im API-Response-Bereich nachgeschaerft, indem ich die Umwandlungslogik zentral im `AppointmentResponse`-Konstruktor gebuendelt und dort eine explizite `null`-Pruefung mit Test ergaenzt habe.
 
 ---
@@ -177,6 +179,8 @@ The example is intentionally compact. Its purpose is not feature breadth, but to
 ## AI And Engineering Judgment
 
 I use AI-assisted development productively, especially with `Cursor`, but I do not treat generated code as self-validating. My focus remains on architecture, correctness, maintainability, testing and acceptance.
+
+For me, quality does not begin with downstream testing. It begins where expected behavior, acceptance criteria and business expectations are made explicit before implementation. That is why `BDD`, `TDD` and test-first thinking are not just techniques for me, but part of responsible software delivery.
 
 One concrete example in this repository: I tightened generated mapping code in the API response layer by centralizing the conversion in the `AppointmentResponse` constructor and adding an explicit null guard with a dedicated test.
 
